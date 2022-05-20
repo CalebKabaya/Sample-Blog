@@ -1,0 +1,11 @@
+#col1 img{
+    width: 100%;
+}
+#btns{
+    background-color: rgb(5, 5, 68);
+    color: white;
+}
+#btns:hover{
+    background-color: rgb(217, 48, 6);
+    color: white;
+}

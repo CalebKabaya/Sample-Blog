@@ -1,0 +1,37 @@
+
+  
+{% macro display(blogs) %}
+
+<div class="container-fluid">
+    <div class="row">
+        {% if blogs %}
+        {% for category in blogs %}
+        <div class="col-md-12">
+            <div class="thumbnail" id="carded">
+                <h5 class="card-header text-center" id="title">{{category.title}}</h5>
+                <div class="card-body">
+                    <p class="post"> {{category.post}}</p>
+                    <p class="text-center" id="cate"> Category: {{category.category}}</p>
+                    <footer class="blockquote-footer text-center"> Posted by: {{category.user.username}}</footer>
+                    <div>
+                        <span class="foot">{{category.comment.count()}} Comments</span>
+                    </div>
+                    <a href="{{url_for('main.comment',blog_id = category.id)}}" class="btn btn-danger" id="comment"> Comment</a>
+                    <a href="#"><i class="btn btn-warning">DELETE</i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="$"><i class="btn btn-warning">EDIT</i></a> 
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <div class="card w-90 mb-3">
+            <div class="card-body">
+
+                <p class="card-title">Category Has 0 posts</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}
