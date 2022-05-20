@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/janeffer/Documents/flask_ip4/virtual"
+set -gx VIRTUAL_ENV "/home/moringa/Documents/Python-Flask/IPS/clone/Flask_ip4/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
